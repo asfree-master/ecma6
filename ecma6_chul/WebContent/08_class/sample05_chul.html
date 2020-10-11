@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//상속 ===>
+class Employee{
+	constructor(name, sal)
+	{
+		this.name=name;
+		this.salary=sal;
+	}
+	setName(name){
+		this.name=name;
+	}
+	setSalary(sal){
+		this.salary= sal;
+	}
+	getName(){
+		return this.name;
+	}
+	getSalary(){
+		return this.salary;
+	}
+}//end Employee
+
+class Manager extends Employee{
+	constructor(name, sal, depart)
+	{
+		super(name, sal);
+		this.depart= depart;
+	}
+	setDepart(depart){
+		this.depart= depart;
+	}
+	getDepart(){
+		return this.depart;
+	}
+}//end Mananger
+var man= new Manager("홍길동", 1000, "인사");
+console.log(man.getName());
+console.log(man.getSalary());
+console.log(man.getDepart());
+</script>
+</head>
+<body>
+
+</body>
+</html>
