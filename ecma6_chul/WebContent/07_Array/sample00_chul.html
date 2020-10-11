@@ -8,6 +8,8 @@
 //Array.from 메서드 ====> 배열로
 // "hello" ===>["h", "e", ...]
 //10,20,30 ==> [10,20,30]
+//Array.from(값, function)
+//값은  array-like객체 또는 iterable객체 
 var arr= Array.from("hello");
 console.log(arr);
 var arr= Array.from( "hello", function(v, idx) { //data, idx
