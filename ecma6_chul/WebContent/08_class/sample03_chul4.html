@@ -10,9 +10,12 @@
 class Person{
 	//new.target 속성, new.target.name속성
 	//new.target은 constructor를 참조함
+	//new.target.name은 클래스의 이름
 	constructor(name, age)
 	{
-		console.log(new.target, new.target.name);
+		console.log(new.target);
+		console.log("=============");
+		console.log(new.target.name);
 	}
 	 setName(name){
 		this.name= name;

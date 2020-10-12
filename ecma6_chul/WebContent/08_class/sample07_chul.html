@@ -23,13 +23,23 @@ class Employee{
 	getSalary(){
 		return this.salary;
 	}
+	getEmployee(){
+		return this.name+"\t"+this.salary;
+	}
 }//end Employee
 
 class Manager extends Employee{
+	//static메소드
+	static getInfo(){
+		console.log(this); //클래스 자체
+		return "홍길동";
+	}
 	constructor(name, sal, depart)
 	{
 		super(name, sal);//필수
-		this.depart= depart;
+console.log("==========");
+console.log(this); //생성된 인스턴스 
+		this.depart= depart;		
 	}
 	setDepart(depart){
 		this.depart= depart;
@@ -37,11 +47,13 @@ class Manager extends Employee{
 	getDepart(){
 		return this.depart;
 	}
+	getEmployee(){
+		return this.name+"\t"+this.salary+ "\t"+this.depart;
+	}
 }//end Mananger
+console.log(Manager.getInfo()); //클래스명.메소드명으로 접근
 var man= new Manager("홍길동", 1000, "인사");
-console.log(man.getName());
-console.log(man.getSalary());
-console.log(man.getDepart());
+console.log(man.getEmployee());//오버라이딩 메소드 호출 
 </script>
 </head>
 <body>

@@ -23,6 +23,9 @@ class Employee{
 	getSalary(){
 		return this.salary;
 	}
+	getEmployee(){
+		return this.name+"\t"+this.salary;
+	}
 }//end Employee
 
 class Manager extends Employee{
@@ -37,11 +40,13 @@ class Manager extends Employee{
 	getDepart(){
 		return this.depart;
 	}
+	//오버라이딩
+	 getEmployee(){
+		return this.name +"\t"+this.age+"\t"+this.depart;
+	}
 }//end Mananger
 var man= new Manager("홍길동", 1000, "인사");
-console.log(man.getName());
-console.log(man.getSalary());
-console.log(man.getDepart());
+console.log(man.getEmployee());//오버라이딩 메소드 호출 
 </script>
 </head>
 <body>
